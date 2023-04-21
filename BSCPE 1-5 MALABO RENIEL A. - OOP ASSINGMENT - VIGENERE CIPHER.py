@@ -10,7 +10,9 @@ letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 def main():
 
 #ask user for input
-    print ('Hello!  This program is designed to create a Vegenere Cipher.')
+    print ('\033[1;35m Hello!  This program is designed to create a Vegenere Cipher.')
+    import time
+    time.sleep(1)
     plaintext = input("What do you want to decipher? Please use uppercase letters with no spaces only. ")
     keyword = input("What is the key to the code? Please use uppercase letters only. ")
     secret_code = encrypt(plaintext, keyword)

@@ -1,7 +1,14 @@
+#Name: Malabo, Reniel A.            #Program and Section: BSCPE 1-5
+#Subject - Object Oriented Programming      #Problem 3 - VIGENERE CIPHER
+
+#Write a program that asks the user for the plaintext (all uppercase letters,no spaces) and the keyword (all uppercase letters) and produce the cipher text using the Vigenère cipher. Give the output of your program for the following message and key: Message: THISISTHELASTTASKHOORDAY Key: KNIGHTS
+
 #create dictionary
 letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
 #define main function
 def main():
+
 #ask user for input
 print ('Hello!  This program is designed to create a Vegenere Cipher.')
     plaintext = input("What do you want to decipher? Please use uppercase letters with no spaces only. ")
@@ -12,9 +19,11 @@ print ('Hello!  This program is designed to create a Vegenere Cipher.')
     print('Deciphering...')
     print("The resulting Vigenere Cipher is: " + secret_code)
     print("Your code is : " + secret_revealed)
+
 #create defining functions
 plaintext_to_index = dict(zip(letters, range(len(letters))))
 index_to_plaintext = dict(zip(range(len(letters)), letters))
+
 #create encrypt function
     def encrypt(plaintext, keyword):
     encrypted = ""
@@ -28,6 +37,7 @@ index_to_plaintext = dict(zip(range(len(letters)), letters))
             i += 1
 
     return encrypted
+    
 #create decrypt function
     def decrypt(plaintext, keyword):
     decrypted = ""

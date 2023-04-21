@@ -37,7 +37,7 @@ index_to_plaintext = dict(zip(range(len(letters)), letters))
             i += 1
 
     return encrypted
-    
+
 #create decrypt function
     def decrypt(plaintext, keyword):
     decrypted = ""

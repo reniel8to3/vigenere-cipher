@@ -16,4 +16,16 @@ print ('Hello!  This program is designed to create a Vegenere Cipher.')
 plaintext_to_index = dict(zip(letters, range(len(letters))))
 index_to_plaintext = dict(zip(range(len(letters)), letters))
 #create encrypt function
+    def encrypt(plaintext, keyword):
+    encrypted = ""
+    split_message = [plaintext[i : i + len(keyword)] for i in range(0, len(plaintext), len(keyword))]
+
+    for each_split in split_message:
+        i = 0
+        for letter in each_split:
+            number = (plaintext_to_index[letter] + plaintext_to_index[keyword[i]]) % len(letters)
+            encrypted += index_to_plaintext[number]
+            i += 1
+
+    return encrypted
 #create decrypt function

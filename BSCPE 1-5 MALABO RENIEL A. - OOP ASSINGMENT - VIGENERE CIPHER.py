@@ -1,4 +1,5 @@
 #create dictionary
+letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 #define main function
 #ask user for input
 #create defining functions

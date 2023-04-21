@@ -29,3 +29,17 @@ index_to_plaintext = dict(zip(range(len(letters)), letters))
 
     return encrypted
 #create decrypt function
+    def decrypt(plaintext, keyword):
+    decrypted = ""
+    split_encrypted = [plaintext[i : i + len(keyword)] for i in range(0, len(plaintext), len(keyword))]
+
+    for each_split in split_encrypted:
+        i = 0
+        for letter in each_split:
+            number = (plaintext_to_index[letter] - plaintext_to_index[keyword[i]]) % len(letters)
+            decrypted += index_to_plaintext[number]
+            i += 1
+
+    return decrypted
+
+main()

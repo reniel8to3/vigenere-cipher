@@ -27,7 +27,7 @@ plaintext_to_index = dict(zip(letters, range(len(letters))))
 index_to_plaintext = dict(zip(range(len(letters)), letters))
 
 #create encrypt function
-    def encrypt(plaintext, keyword):
+def encrypt(plaintext, keyword):
     encrypted = ""
     split_message = [plaintext[i : i + len(keyword)] for i in range(0, len(plaintext), len(keyword))]
 
@@ -41,7 +41,7 @@ index_to_plaintext = dict(zip(range(len(letters)), letters))
     return encrypted
 
 #create decrypt function
-    def decrypt(plaintext, keyword):
+def decrypt(plaintext, keyword):
     decrypted = ""
     split_encrypted = [plaintext[i : i + len(keyword)] for i in range(0, len(plaintext), len(keyword))]
 

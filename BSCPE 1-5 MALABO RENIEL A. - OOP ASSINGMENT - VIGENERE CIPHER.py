@@ -13,5 +13,7 @@ print ('Hello!  This program is designed to create a Vegenere Cipher.')
     print("The resulting Vigenere Cipher is: " + secret_code)
     print("Your code is : " + secret_revealed)
 #create defining functions
+plaintext_to_index = dict(zip(letters, range(len(letters))))
+index_to_plaintext = dict(zip(range(len(letters)), letters))
 #create encrypt function
 #create decrypt function
